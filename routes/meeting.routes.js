@@ -3,7 +3,7 @@ import Meeting from '../models/meeting.model.js'
 
 const router = Router()
 
-router.post('/book-a-session', async (req, res, next) => {
+router.post('/purchase-a-session-or-a-bundle', async (req, res, next) => {
   const meeting = req.body
 
   try {
