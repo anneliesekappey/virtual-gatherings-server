@@ -8,6 +8,11 @@ const meetingSchema = new Schema(
       trim: true,
     },
 
+    imageURL: {
+      type: String,
+      trim: true,
+    }
+
     description: {
       type: String,
       required: [true, 'description is required'],
