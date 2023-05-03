@@ -11,7 +11,7 @@ const meetingSchema = new Schema(
     imageURL: {
       type: String,
       trim: true,
-    }
+    },
 
     description: {
       type: String,
