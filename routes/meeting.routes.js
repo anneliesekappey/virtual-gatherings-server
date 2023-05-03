@@ -15,7 +15,16 @@ router.post('/purchase-a-session-or-a-bundle', async (req, res, next) => {
 })
 
 router.get('/book-a-session', async (req, res, next) => {
-  const user = req.meeting
+  try {
+    const meetings = await Meeting.find()
+    res.status(200).json(meetings)
+  } catch (error) {
+    next(error)
+  }
+})
+
+router.get('/purchase-a-session-or-a-bundle', async (req, res, next) => {
+  const meeting = req.meeting
 
   try {
     const meetingFound = await Meeting.findById(meeting.id)
